@@ -38,6 +38,11 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# A simple HTTP and REST client for Ruby, inspired by the Sinatra's
+# microframework style of specifying actions: get, put, post, delete.
+# Read more: https://github.com/rest-client/rest-client
+gem 'rest-client'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console.
@@ -47,6 +52,10 @@ group :development, :test do
   # alternative to its default testing framework, Minitest.
   # Read more: https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 4.0beta3'
+
+  # Library for stubbing and setting expectations on HTTP requests in Ruby.
+  # Read more: https://github.com/bblimke/webmock
+  gem 'webmock'
 end
 
 group :development do
