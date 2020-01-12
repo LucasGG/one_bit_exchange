@@ -20,6 +20,6 @@ ENV INSTALL_PATH /one_bit_exchange
 RUN mkdir -p $INSTALL_PATH
 WORKDIR $INSTALL_PATH
 
-RUN bundle config set path '/gems'
+ENV BUNDLE_PATH /gems
 
 COPY . .
