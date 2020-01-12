@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: "postgres:12.1"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  app:
+    depends_on:
+      - "postgres"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash start.sh
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/one_bit_exchange
+      - gems:/gems
+
+volumes:
+  postgres:
+  gems:
