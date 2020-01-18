@@ -11,7 +11,7 @@ services:
       - 'postgres'
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .docker/files/development
     command: bash start.sh
     ports:
       - '3000:3000'
