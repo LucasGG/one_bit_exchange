@@ -4,4 +4,4 @@ bundle check || bundle install
 
 bundle exec rails db:migrate
 
-bundle exec puma -C config/puma.rb
+bundle exec rails server --binding=0.0.0.0
