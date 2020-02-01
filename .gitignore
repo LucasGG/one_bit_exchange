@@ -26,3 +26,11 @@
 
 # Ignore rspec runtime files.
 /spec/examples.txt
+
+# Webpack.
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

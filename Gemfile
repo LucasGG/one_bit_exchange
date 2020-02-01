@@ -33,6 +33,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Read more: https://github.com/rest-client/rest-client
 gem 'rest-client', '~> 2.1'
 
+# Webpacker.
+gem 'webpacker', '~> 4.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console.
