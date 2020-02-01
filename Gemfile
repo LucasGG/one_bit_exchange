@@ -14,6 +14,7 @@ gem 'puma', '~> 4.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'sprockets', '< 4'
 
 # Turbolinks makes navigating your web application faster.
 # Read more: https://github.com/turbolinks/turbolinks
