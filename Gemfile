@@ -14,6 +14,8 @@ gem 'puma', '~> 4.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+
+# Downgrade sprockets because of firefox!
 gem 'sprockets', '< 4'
 
 # Turbolinks makes navigating your web application faster.
@@ -29,12 +31,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # A simple HTTP and REST client for Ruby, inspired by the Sinatra's
 # microframework style of specifying actions: get, put, post, delete.
 # Read more: https://github.com/rest-client/rest-client
-gem 'rest-client', '~> 2.1.0'
+gem 'rest-client', '~> 2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console.
-  gem 'byebug', '~> 11.1.1', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
 
   # rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in
   # alternative to its default testing framework, Minitest.
@@ -43,7 +45,7 @@ group :development, :test do
 
   # Library for stubbing and setting expectations on HTTP requests in Ruby.
   # Read more: https://github.com/bblimke/webmock
-  gem 'webmock', '~> 3.8.0'
+  gem 'webmock', '~> 3.8'
 end
 
 group :development do
@@ -70,7 +72,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver.
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver', '~> 3.142.7'
+  gem 'selenium-webdriver', '~> 3.142'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

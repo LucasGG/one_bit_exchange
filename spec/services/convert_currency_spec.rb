@@ -2,13 +2,20 @@
 
 require 'rails_helper'
 
-RSpec.describe 'ConvertCurrency' do
-  it 'converts one currency to another' do
-    res = ConvertCurrency.call(source: 'USD',
-                               target: 'BRL',
-                               amount: rand(0..9999))
+RSpec.describe ConvertCurrency do
+  let(:converted_currency) do
+    described_class.call(
+      source: 'USD',
+      target: 'BRL',
+      amount: rand(0..9999)
+    )
+  end
 
-    expect(res.is_a?(Numeric)).to be(true)
-    expect(res != 0 || amount == 0).to be(true)
+  it 'converted currency is a numeric' do
+    expect(converted_currency.is_a?(Numeric)).to be(true)
+  end
+
+  it 'converted currency is bigger or equal to zero' do
+    expect(converted_currency >= 0).to be(true)
   end
 end
