@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -31,7 +33,7 @@ gem 'rest-client', '~> 2.1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console.
-  gem 'byebug', '~> 11.1.1', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', '~> 11.1.1', platforms: %i[mri mingw x64_mingw]
 
   # rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in
   # alternative to its default testing framework, Minitest.
@@ -46,14 +48,22 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console'
   # anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
 
   # Spring speeds up development by keeping your application running in the
   # background.
   # Read more: https://github.com/rails/spring
   gem 'spring', '~> 2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # A Ruby static code analyzer and formatter, based on the community Ruby
+  # style guide.
+  # Read more: https://github.com/rubocop-hq/rubocop
+  gem 'rubocop', '~> 0.79', require: false
+  gem 'rubocop-performance', '~> 1.5', require: false
+  gem 'rubocop-rails', '~> 2.4', require: false
+  gem 'rubocop-rspec', '~> 1.37', require: false
 end
 
 group :test do
@@ -62,4 +72,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

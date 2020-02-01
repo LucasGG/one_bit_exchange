@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 RSpec.configure do |config|
-  config.before(:each) do
-    stub_request(:get, /currencydatafeed.com/ )
-    .with(headers: {
-      'Accept'=>'*/*'
-    }).to_return(status: 200, body: '
+  config.before do
+    stub_request(:get, /currencydatafeed.com/)
+      .with(headers: {
+              'Accept' => '*/*'
+            }).to_return(status: 200, body: '
       {
         "status": true,
         "currency": [

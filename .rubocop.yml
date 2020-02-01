@@ -1,0 +1,14 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+  TargetRubyVersion: 2.6
