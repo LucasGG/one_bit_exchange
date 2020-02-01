@@ -5,8 +5,8 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
       tee /etc/apt/sources.list.d/yarn.list
 
-RUN apt-get --quiet update \
-    && apt-get --quiet --assume-yes --no-install-recommends install \
+RUN apt-get update --quiet \
+    && apt-get install --quiet --assume-yes --no-install-recommends \
       nodejs \
       yarn \
       build-essential \
@@ -16,9 +16,10 @@ RUN apt-get --quiet update \
       nano \
     && rm -rf /var/lib/apt/lists/*
 
-ENV INSTALL_PATH /one_bit_exchange
-RUN mkdir -p $INSTALL_PATH
-WORKDIR $INSTALL_PATH
+RUN gem install bundler -v '2.1.4'
+
+RUN mkdir -p /one_bit_exchange
+WORKDIR /one_bit_exchange
 
 ENV BUNDLE_PATH /gems
 
