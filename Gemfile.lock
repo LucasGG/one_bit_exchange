@@ -229,22 +229,22 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
-  byebug
+  byebug (~> 11.1.1)
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
-  rest-client
-  rspec-rails (~> 4.0beta3)
+  rest-client (~> 2.1.0)
+  rspec-rails (~> 4.0.0.beta4)
   sass-rails (>= 6)
-  spring
+  spring (~> 2.1.0)
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
-  webmock
+  webmock (~> 3.8.0)
 
 RUBY VERSION
    ruby 2.6.5p114
