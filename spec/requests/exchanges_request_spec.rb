@@ -5,22 +5,20 @@ require 'rails_helper'
 RSpec.describe 'Exchanges', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
-      get '/exchanges/index'
+      get '/'
       expect(response).to have_http_status(:success)
     end
   end
 
   describe 'GET /convert' do
-    before do
-      @amount = rand(1..9999)
-    end
+    let(:amount) { rand(1..9999) }
 
     it 'returns http success' do
-      get '/exchanges/convert',
+      get '/convert',
           params: {
             source_currency: 'USD',
             target_currency: 'BRL',
-            amount: @amount
+            amount: amount
           }
       expect(response).to have_http_status(:success)
     end

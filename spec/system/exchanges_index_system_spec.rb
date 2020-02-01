@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe 'Exchange currency process', :type => :system, js: true do
-  it "exchange value" do
+RSpec.describe 'Exchange currency process', type: :system, js: true do
+  it 'exchange value' do
     visit '/'
     within('#exchange_form') do
       select('EUR', from: 'source_currency')

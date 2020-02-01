@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Inherit that class to use services calling call into class.
 class ApplicationService
   def self.call(*args, &block)

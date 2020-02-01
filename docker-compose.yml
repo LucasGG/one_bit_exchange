@@ -8,7 +8,7 @@ services:
 
   app:
     build: .
-    command: /bin/sh docker-app-init.sh
+    command: /bin/sh docker-compose-app-init.sh
     ports:
       - target: 3000
         published: 3000
