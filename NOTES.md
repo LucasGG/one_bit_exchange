@@ -10,5 +10,6 @@ layout...
 
 # Heroku
 
-"Reset Git repo before deploy" precisa estar desabilitado e o assets:precompile
-precisa estar como comando post-deploy nessa mesma configuração do codeship.
+"Reset Git repo before deploy" precisa estar desabilitado no codeship.
+
+Além disso precisa ser ativada a flag RAILS_ENV=production no codeship...
