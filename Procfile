@@ -1,1 +1,1 @@
-web: /bin/sh boot.sh
+web: /bin/sh heroku-boot.sh
