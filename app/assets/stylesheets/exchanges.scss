@@ -6,10 +6,13 @@ body {
   background-size: cover;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .main {
   margin-top: 50px;
 }
-
 
 .title-box {
   margin-top: 20%;

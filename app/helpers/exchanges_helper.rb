@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module ExchangesHelper
-  def currency_list
+  def currencies
     currencies = CurrencyDataFeed::ConvertCurrency::AVAILABLE_CURRENCIES
-    currencies[:standard] + ['----'] + currencies[:crypto]
+    currencies[:crypto] + ['----'] + currencies[:standard]
   end
 end
